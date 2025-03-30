@@ -1,0 +1,232 @@
+Variable,Mean Estimate,Conditional Estimates
+Frost Days,-0.027450887034941807,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+      d                                           
+─────────────(E[Average Weather Delay per Flight])
+d[Frost Days]                                     
+Estimand assumption 1, Unconfoundedness: If U→{Frost Days} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Frost Days,,U) = P(Average Weather Delay per Flight|Frost Days,)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Frost Days+Frost Days*Snow Precipitation+Frost Days*Wind Speed (50m Average)+Frost Days*Temperature Max (2m)+Frost Days*Corrected Total Precipitation+Frost Days*Wind Speed Max (50m)+Frost Days*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: -0.027450887034941807
+### Conditional Estimates
+__categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Max (2m)  __categorical__Corrected Total Precipitation  __categorical__Wind Speed Max (50m)  __categorical__Temperature Min (2m)
+(-0.001, 0.34]                     (1.949, 4.1]                             (-19.421000000000003, 19.26]         (-0.001, 0.94]                                (4.308999999999999, 9.5]             (-48.571, -7.1]                        0.005466
+                                                                                                                                                                                                    (-7.1, -0.42]                         -0.019383
+                                                                                                                                                                                                    (-0.42, 7.06]                         -0.030555
+                                                                                                                                                                                                    (7.06, 13.67]                         -0.041201
+                                                                                                                                                               (9.5, 11.49]                         (-48.571, -7.1]                       -0.002474
+                                                                                                                                                                                                                                             ...   
+(0.34, 15.19]                      (6.69, 13.75]                            (33.72, 49.08]                       (0.94, 1.93]                                  (15.72, 38.95]                       (-48.571, -7.1]                       -0.005562
+                                                                                                                                                                                                    (-7.1, -0.42]                         -0.010228
+                                                                                                                                                                                                    (-0.42, 7.06]                         -0.015130
+                                                                                                                 (1.93, 2.89]                                  (15.72, 38.95]                       (-7.1, -0.42]                         -0.017077
+                                                                                                                                                                                                    (-0.42, 7.06]                         -0.023840
+Length: 2545, dtype: float64"
+Snow Precipitation,-0.15691124396198997,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+          d                                               
+─────────────────────(E[Average Weather Delay per Flight])
+d[Snow Precipitation]                                     
+Estimand assumption 1, Unconfoundedness: If U→{Snow Precipitation} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Snow Precipitation,,U) = P(Average Weather Delay per Flight|Snow Precipitation,)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Snow Precipitation+Snow Precipitation*Wind Speed (50m Average)+Snow Precipitation*Temperature Max (2m)+Snow Precipitation*Corrected Total Precipitation+Snow Precipitation*Frost Days+Snow Precipitation*Wind Speed Max (50m)+Snow Precipitation*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: -0.15691124396198997
+### Conditional Estimates
+__categorical__Wind Speed (50m Average)  __categorical__Temperature Max (2m)  __categorical__Corrected Total Precipitation  __categorical__Frost Days  __categorical__Wind Speed Max (50m)  __categorical__Temperature Min (2m)
+(1.949, 4.1]                             (-19.421000000000003, 19.26]         (-0.001, 0.94]                                (-0.001, 1.0]              (4.308999999999999, 9.5]             (-7.1, -0.42]                         -0.074344
+                                                                                                                                                                                            (-0.42, 7.06]                         -0.067564
+                                                                                                                                                                                            (7.06, 13.67]                         -0.194846
+                                                                                                                                                       (9.5, 11.49]                         (-0.42, 7.06]                         -0.125095
+                                                                                                                                                                                            (7.06, 13.67]                         -0.166238
+                                                                                                                                                                                                                                     ...   
+(6.69, 13.75]                            (33.72, 49.08]                       (4.2, 32.15]                                  (-0.001, 1.0]              (13.36, 15.72]                       (13.67, 29.31]                        -0.442891
+                                                                                                                                                       (15.72, 38.95]                       (-0.42, 7.06]                         -0.267211
+                                                                                                                                                                                            (7.06, 13.67]                         -0.363024
+                                                                                                                                                                                            (13.67, 29.31]                        -0.645790
+                                                                                                                            (1.0, 17.0]                (15.72, 38.95]                       (-7.1, -0.42]                         -0.137482
+Length: 2669, dtype: float64"
+Corrected Total Precipitation,0.05748750336180297,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+               d                                                     
+────────────────────────────────(E[Average Weather Delay per Flight])
+d[Corrected Total Precipitation]                                     
+Estimand assumption 1, Unconfoundedness: If U→{Corrected Total Precipitation} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Corrected Total Precipitation,,U) = P(Average Weather Delay per Flight|Corrected Total Precipitation,)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Corrected Total Precipitation+Corrected Total Precipitation*Snow Precipitation+Corrected Total Precipitation*Wind Speed (50m Average)+Corrected Total Precipitation*Temperature Max (2m)+Corrected Total Precipitation*Frost Days+Corrected Total Precipitation*Wind Speed Max (50m)+Corrected Total Precipitation*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: 0.05748750336180297
+### Conditional Estimates
+__categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Max (2m)  __categorical__Frost Days  __categorical__Wind Speed Max (50m)  __categorical__Temperature Min (2m)
+(-0.001, 0.34]                     (1.949, 4.1]                             (-19.421000000000003, 19.26]         (-0.001, 1.0]              (4.308999999999999, 9.5]             (-7.1, -0.42]                         -0.005190
+                                                                                                                                                                                 (-0.42, 7.06]                         -0.005790
+                                                                                                                                                                                 (7.06, 13.67]                          0.001128
+                                                                                                                                            (9.5, 11.49]                         (-7.1, -0.42]                         -0.001528
+                                                                                                                                                                                 (-0.42, 7.06]                         -0.008933
+                                                                                                                                                                                                                          ...   
+(0.34, 15.19]                      (6.69, 13.75]                            (29.73, 33.72]                       (17.0, 31.0]               (15.72, 38.95]                       (-48.571, -7.1]                        0.139494
+                                                                            (33.72, 49.08]                       (-0.001, 1.0]              (15.72, 38.95]                       (-0.42, 7.06]                          0.042069
+                                                                                                                 (1.0, 17.0]                (13.36, 15.72]                       (-7.1, -0.42]                          0.065584
+                                                                                                                                            (15.72, 38.95]                       (-48.571, -7.1]                        0.084725
+                                                                                                                                                                                 (-7.1, -0.42]                          0.062801
+Length: 958, dtype: float64"
+Temperature Max (2m),-0.016775851902562033,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                                
+───────────────────────(E[Average Weather Delay per Flight])
+d[Temperature Max (2m)]                                     
+Estimand assumption 1, Unconfoundedness: If U→{Temperature Max (2m)} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Temperature Max (2m),,U) = P(Average Weather Delay per Flight|Temperature Max (2m),)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Temperature Max (2m)+Temperature Max (2m)*Snow Precipitation+Temperature Max (2m)*Wind Speed (50m Average)+Temperature Max (2m)*Corrected Total Precipitation+Temperature Max (2m)*Frost Days+Temperature Max (2m)*Wind Speed Max (50m)+Temperature Max (2m)*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: -0.016775851902562033
+### Conditional Estimates
+__categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Corrected Total Precipitation  __categorical__Frost Days  __categorical__Wind Speed Max (50m)  __categorical__Temperature Min (2m)
+(-0.001, 0.34]                     (1.949, 4.1]                             (-0.001, 0.94]                                (-0.001, 1.0]              (4.308999999999999, 9.5]             (-7.1, -0.42]                         -0.024121
+                                                                                                                                                                                          (-0.42, 7.06]                         -0.021437
+                                                                                                                                                                                          (7.06, 13.67]                         -0.019209
+                                                                                                                                                                                          (13.67, 29.31]                        -0.016941
+                                                                                                                                                     (9.5, 11.49]                         (-7.1, -0.42]                         -0.025082
+                                                                                                                                                                                                                                   ...   
+(0.34, 15.19]                      (6.69, 13.75]                            (4.2, 32.15]                                  (1.0, 17.0]                (15.72, 38.95]                       (-0.42, 7.06]                         -0.008971
+                                                                                                                          (17.0, 31.0]               (13.36, 15.72]                       (-48.571, -7.1]                       -0.000635
+                                                                                                                                                                                          (-7.1, -0.42]                         -0.012881
+                                                                                                                                                     (15.72, 38.95]                       (-48.571, -7.1]                        0.002357
+                                                                                                                                                                                          (-7.1, -0.42]                          0.016921
+Length: 1246, dtype: float64"
+Temperature Min (2m),-0.002075231424993329,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                                
+───────────────────────(E[Average Weather Delay per Flight])
+d[Temperature Min (2m)]                                     
+Estimand assumption 1, Unconfoundedness: If U→{Temperature Min (2m)} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Temperature Min (2m),,U) = P(Average Weather Delay per Flight|Temperature Min (2m),)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Temperature Min (2m)+Temperature Min (2m)*Snow Precipitation+Temperature Min (2m)*Wind Speed (50m Average)+Temperature Min (2m)*Temperature Max (2m)+Temperature Min (2m)*Corrected Total Precipitation+Temperature Min (2m)*Wind Speed Max (50m)+Temperature Min (2m)*Frost Days
+Target units: 
+
+## Estimate
+Mean value: -0.002075231424993329
+### Conditional Estimates
+__categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Max (2m)  __categorical__Corrected Total Precipitation  __categorical__Wind Speed Max (50m)  __categorical__Frost Days
+(-0.001, 0.34]                     (1.949, 4.1]                             (-19.421000000000003, 19.26]         (-0.001, 0.94]                                (4.308999999999999, 9.5]             (-0.001, 1.0]               -0.017205
+                                                                                                                                                                                                    (1.0, 17.0]                 -0.016231
+                                                                                                                                                                                                    (17.0, 31.0]                -0.025655
+                                                                                                                                                               (9.5, 11.49]                         (-0.001, 1.0]               -0.018075
+                                                                                                                                                                                                    (1.0, 17.0]                 -0.018569
+                                                                                                                                                                                                                                   ...   
+(0.34, 15.19]                      (6.69, 13.75]                            (33.72, 49.08]                       (-0.001, 0.94]                                (15.72, 38.95]                       (1.0, 17.0]                 -0.006262
+                                                                                                                 (0.94, 1.93]                                  (15.72, 38.95]                       (-0.001, 1.0]               -0.012221
+                                                                                                                                                                                                    (1.0, 17.0]                 -0.008073
+                                                                                                                 (1.93, 2.89]                                  (15.72, 38.95]                       (-0.001, 1.0]                0.003547
+                                                                                                                                                                                                    (1.0, 17.0]                 -0.001023
+Length: 1652, dtype: float64"
+Wind Speed (50m Average),-0.0006180935126447462,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+             d                                                  
+───────────────────────────(E[Average Weather Delay per Flight])
+d[Wind Speed (50m Average)]                                     
+Estimand assumption 1, Unconfoundedness: If U→{Wind Speed (50m Average)} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Wind Speed (50m Average),,U) = P(Average Weather Delay per Flight|Wind Speed (50m Average),)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Wind Speed (50m Average)+Wind Speed (50m Average)*Snow Precipitation+Wind Speed (50m Average)*Temperature Max (2m)+Wind Speed (50m Average)*Corrected Total Precipitation+Wind Speed (50m Average)*Frost Days+Wind Speed (50m Average)*Wind Speed Max (50m)+Wind Speed (50m Average)*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: -0.0006180935126447462
+### Conditional Estimates
+__categorical__Snow Precipitation  __categorical__Temperature Max (2m)  __categorical__Corrected Total Precipitation  __categorical__Frost Days  __categorical__Wind Speed Max (50m)  __categorical__Temperature Min (2m)
+(-0.001, 0.34]                     (-19.421000000000003, 19.26]         (-0.001, 0.94]                                (-0.001, 1.0]              (4.308999999999999, 9.5]             (-7.1, -0.42]                         -0.044262
+                                                                                                                                                                                      (-0.42, 7.06]                         -0.045555
+                                                                                                                                                                                      (7.06, 13.67]                         -0.043262
+                                                                                                                                                 (9.5, 11.49]                         (-0.42, 7.06]                         -0.045328
+                                                                                                                                                                                      (7.06, 13.67]                         -0.044241
+                                                                                                                                                                                                                               ...   
+(0.34, 15.19]                      (33.72, 49.08]                       (0.94, 1.93]                                  (1.0, 17.0]                (15.72, 38.95]                       (-0.42, 7.06]                         -0.007749
+                                                                        (1.93, 2.89]                                  (-0.001, 1.0]              (11.49, 13.36]                       (-7.1, -0.42]                         -0.003646
+                                                                                                                                                 (15.72, 38.95]                       (-0.42, 7.06]                         -0.009980
+                                                                                                                      (1.0, 17.0]                (13.36, 15.72]                       (-0.42, 7.06]                          0.010960
+                                                                                                                                                 (15.72, 38.95]                       (-7.1, -0.42]                          0.011939
+Length: 1108, dtype: float64"
+Wind Speed Max (50m),-0.016638631576679552,"*** Causal Estimate ***
+
+## Identified estimand
+Estimand type: EstimandType.NONPARAMETRIC_ATE
+
+### Estimand : 1
+Estimand name: backdoor
+Estimand expression:
+           d                                                
+───────────────────────(E[Average Weather Delay per Flight])
+d[Wind Speed Max (50m)]                                     
+Estimand assumption 1, Unconfoundedness: If U→{Wind Speed Max (50m)} and U→Average Weather Delay per Flight then P(Average Weather Delay per Flight|Wind Speed Max (50m),,U) = P(Average Weather Delay per Flight|Wind Speed Max (50m),)
+
+## Realized estimand
+b: Average Weather Delay per Flight~Wind Speed Max (50m)+Wind Speed Max (50m)*Snow Precipitation+Wind Speed Max (50m)*Wind Speed (50m Average)+Wind Speed Max (50m)*Temperature Max (2m)+Wind Speed Max (50m)*Corrected Total Precipitation+Wind Speed Max (50m)*Frost Days+Wind Speed Max (50m)*Temperature Min (2m)
+Target units: 
+
+## Estimate
+Mean value: -0.016638631576679552
+### Conditional Estimates
+__categorical__Snow Precipitation  __categorical__Wind Speed (50m Average)  __categorical__Temperature Max (2m)  __categorical__Corrected Total Precipitation  __categorical__Frost Days  __categorical__Temperature Min (2m)
+(-0.001, 0.34]                     (1.949, 4.1]                             (-19.421000000000003, 19.26]         (-0.001, 0.94]                                (-0.001, 1.0]              (-7.1, -0.42]                         -0.041774
+                                                                                                                                                                                          (-0.42, 7.06]                         -0.040350
+                                                                                                                                                                                          (7.06, 13.67]                         -0.039571
+                                                                                                                                                               (1.0, 17.0]                (-48.571, -7.1]                       -0.023192
+                                                                                                                                                                                          (-7.1, -0.42]                         -0.031778
+                                                                                                                                                                                                                                   ...   
+(0.34, 15.19]                      (6.69, 13.75]                            (33.72, 49.08]                       (0.94, 1.93]                                  (-0.001, 1.0]              (-0.42, 7.06]                         -0.003815
+                                                                                                                                                               (1.0, 17.0]                (-48.571, -7.1]                       -0.005154
+                                                                                                                                                                                          (-7.1, -0.42]                         -0.013778
+                                                                                                                 (1.93, 2.89]                                  (-0.001, 1.0]              (-0.42, 7.06]                         -0.014788
+                                                                                                                                                               (1.0, 17.0]                (-7.1, -0.42]                         -0.007624
+Length: 1117, dtype: float64"
